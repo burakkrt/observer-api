@@ -5,5 +5,6 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
+        <p>lorem</p>
     </React.StrictMode>,
 )
