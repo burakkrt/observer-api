@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <>
             <Container>
                 <p>dasdas</p>
-                <h3>bu h3 etiketidir1</h3>
+                <h3>bu h3 etiketidir12</h3>
                 <Button $primary>test butonu</Button>
             </Container>
         </>
