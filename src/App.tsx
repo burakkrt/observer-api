@@ -4,22 +4,31 @@ import * as theme from '../app/global/theme.tsx'
 import { Container } from '../app/global/utilities.styled.ts'
 import { GlobalStyle } from '../app/global/global.styled.ts'
 import { useEffect, useState } from 'react'
+import Header from './components/header'
 
 export default function App() {
-  const rootContext = useRootContext()
-  const [isTheme, setIsTheme] = useState(rootContext.state.mode)
+  const { state, setTheme } = useRootContext()
+  const [isTheme, setIsTheme] = useState(state.mode)
 
   useEffect(() => {
-    rootContext.setTheme(isTheme)
+    setIsTheme(state.mode)
+    console.log('das')
+  }, [state.mode])
+
+  useEffect(() => {
+    setTheme(isTheme)
   }, [isTheme])
 
   const handlerSetTheme = () => {
-    setIsTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+    setIsTheme((isTheme) => (isTheme === 'dark' ? 'light' : 'dark'))
   }
+
+  console.log('app çalıştı')
 
   return (
     <RootProvider>
       <ThemeProvider theme={theme[isTheme]}>
+        <Header mode={setIsTheme} />
         <Container>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
