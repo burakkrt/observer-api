@@ -4,14 +4,14 @@ import reducer from './reducer.ts'
 import * as actions from './actions.ts'
 
 const initialState: IState = {
-  mode: 'dark',
+  mode: 'light',
 }
 
 const RootContext = createContext<{
-  setTheme: (data: IMode) => void // setTheme işlevinin tipini belirtiyoruz
+  setTheme: (data: IMode) => void
   state: IState
 }>({
-  setTheme: () => {}, // Başlangıçta boş bir işlev atıyoruz
+  setTheme: () => {},
   state: initialState,
 })
 
