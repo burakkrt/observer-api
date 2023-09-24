@@ -10,7 +10,3 @@ export interface IAction {
   type: typeof SET_THEME
   payload: 'dark' | 'light'
 }
-
-export interface IProps {
-  mode: any
-}

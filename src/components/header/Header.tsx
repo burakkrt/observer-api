@@ -2,11 +2,12 @@ import { FormControlLabel } from '@mui/material'
 import { useRootContext } from '../../../app/context/RootContext.tsx'
 import React, { useEffect, useState } from 'react'
 import * as Styled from './header.styled.ts'
-import { IProps } from '../../../app/context/types'
+import { IProps } from './types'
+import { IMode } from '../../../app/context/types'
 
 export default function Header({ mode }: IProps) {
   const rootContext = useRootContext()
-  const [isMode, setIsMode] = useState(rootContext.state.mode)
+  const [isMode, setIsMode] = useState<IMode>(rootContext.state.mode)
   const [isSwitchMode, setIsSwitch] = useState<boolean>(
     rootContext.state.mode === 'dark'
   )
