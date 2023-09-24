@@ -3,8 +3,11 @@ import { IMode, IState } from './types'
 import reducer from './reducer.ts'
 import * as actions from './actions.ts'
 
+const storedThemeMode = localStorage.getItem('themeMode')
 const initialState: IState = {
-  mode: 'light',
+  mode: (typeof storedThemeMode === 'string'
+    ? JSON.parse(storedThemeMode)
+    : 'dark') as 'dark' | 'light',
 }
 
 const RootContext = createContext<{

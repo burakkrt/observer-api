@@ -13,9 +13,14 @@ export default function Header({ mode }: IProps) {
   )
 
   useEffect(() => {
-    mode(isSwitchMode ? 'dark' : 'light')
-    setIsMode(isSwitchMode ? 'dark' : 'light')
+    const chancedMode: IMode = isSwitchMode ? 'dark' : 'light'
+    mode(chancedMode)
+    setIsMode(chancedMode)
   }, [isSwitchMode])
+
+  useEffect(() => {
+    localStorage.setItem('themeMode', JSON.stringify(isMode))
+  }, [isMode])
 
   const handlerThemeChance = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsSwitch(e.target.checked)
