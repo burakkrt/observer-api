@@ -23,9 +23,15 @@ export default function Header({ mode }: IProps) {
   return (
     <Styled.Header>
       <ul className="nav">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <a href="#">
+          <li>Home</li>
+        </a>
+        <a href="#">
+          <li>About</li>
+        </a>
+        <a href="#">
+          <li>Contact</li>
+        </a>
       </ul>
       <Styled.FormGroupMode className="switchMode">
         <FormControlLabel

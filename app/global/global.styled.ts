@@ -4,4 +4,8 @@ export const GlobalStyle = createGlobalStyle`
     *{
       font-family: 'Poppins', sans-serif;;
     }
+    
+    body {
+      background-color: ${(props) => props.theme.backgrounds.body};
+    }
 `

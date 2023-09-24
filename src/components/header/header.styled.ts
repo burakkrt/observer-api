@@ -38,8 +38,10 @@ export const Header = styled.div`
     font-weight: bold;
     font-size: 18px;
 
-    li {
+    a {
       display: inline-block;
+      text-decoration: none;
+      color: inherit;
 
       &:not(:last-child) {
         margin-right: 40px;
