@@ -1,6 +1,6 @@
 import RootProvider, { useRootContext } from '../app/context/RootContext.tsx'
 import { ThemeProvider } from 'styled-components'
-import * as theme from '../app/global/theme.tsx'
+import * as theme from '../app/global/theme.ts'
 import { GlobalStyle } from '../app/global/global.styled.ts'
 import { useState } from 'react'
 import Header from './components/header'

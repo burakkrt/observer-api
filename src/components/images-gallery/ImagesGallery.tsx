@@ -1,6 +1,7 @@
 import * as Style from './ImagesGallery.styled.ts'
 import { useEffect, useState } from 'react'
-import { Box, Slider, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import { CustomSliderMUI } from './ImagesGallery.styled.ts'
 
 export default function ImagesGallery() {
   const [imageCount, setImageCount] = useState(1)
@@ -79,7 +80,7 @@ export default function ImagesGallery() {
           Resim Boyutu: <strong>{imageSize}px</strong>
         </Typography>
         <Box sx={{ width: 400 }}>
-          <Slider
+          <CustomSliderMUI
             aria-label="Always visible"
             value={imageSize}
             getAriaValueText={valuetext}
@@ -92,8 +93,10 @@ export default function ImagesGallery() {
           />
         </Box>
         <span className="info-text">
-          İlgili alana belirli adet element sığdırmayı amaçlar. Sonuçları görmek
-          için resim boyutlarını veya tarayıcı boyutunu küçültün & büyültün.
+          İlgili alana Observer API kullanarak belirli adet element sığdırmayı
+          amaçlar. <br />
+          Sonuçları görmek için resim boyutlarını veya tarayıcı boyutunu
+          küçültün & büyültün.
         </span>
       </Style.InfoContainer>
     </>
