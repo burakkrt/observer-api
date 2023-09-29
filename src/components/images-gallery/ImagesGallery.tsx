@@ -18,7 +18,6 @@ export default function ImagesGallery() {
         } else imageElement.style.display = 'none'
       })
       setImageCount(Math.floor(entry.contentRect.width / imageSize))
-      console.log(Math.floor(entry.contentRect.width / imageSize))
     })
 
     resizeObserver.observe(galleryLayout)
