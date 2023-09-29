@@ -5,6 +5,7 @@ import { GlobalStyle } from '../app/global/global.styled.ts'
 import { useState } from 'react'
 import Header from './components/header'
 import Home from './pages/home'
+import Intersection from './pages/intersection'
 
 export default function App() {
   const { state } = useRootContext()
@@ -15,6 +16,7 @@ export default function App() {
       <ThemeProvider theme={theme[isTheme]}>
         <Header mode={setIsTheme} />
         <Home />
+        <Intersection />
         <GlobalStyle />
       </ThemeProvider>
     </RootProvider>
