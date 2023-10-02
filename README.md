@@ -3,6 +3,7 @@
 
 Tracking and processing HTML elements with Observer API.
 
+[**Go Live**](https://react-i18next-multi-language.netlify.app)
 
 ## Technology and Packages Used
 
